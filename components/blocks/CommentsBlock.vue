@@ -1,19 +1,9 @@
 <template>
   <div>
     <ul v-if="comments.length" id="comments">
-      <comment-block
-        v-for="comment in comments"
-        :key="comment.id_code"
-        :comment="comment"
-        :level="0"
-      />
+      <comment-block v-for="comment in comments" :key="comment.id_code" :comment="comment" :level="0" />
     </ul>
-    <a
-      :href="addCommentLink"
-      target="_blank"
-      rel="nofollow noopener noreferer"
-      class="add-comment"
-    >
+    <a :href="addCommentLink" target="_blank" rel="nofollow noopener noreferer" class="add-comment">
       Add comment
     </a>
   </div>
@@ -60,9 +50,11 @@ export default {
   font-weight: $display-font-weight;
   letter-spacing: $-ls2;
   margin-bottom: 1rem;
+
   &:hover {
     background: $hovered-surface-color;
   }
+
   &:active {
     background: transparent;
     box-shadow: $small-inner-shadow;

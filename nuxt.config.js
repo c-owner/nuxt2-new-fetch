@@ -6,19 +6,21 @@ export default {
             lang: 'ko'
         },
         meta: [
-            {charset: 'utf-8'},
-            {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-            {hid: 'description', name: 'description', content: ''},
-            {name: 'format-detection', content: 'telephone=no'},
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { hid: 'description', name: 'description', content: '' },
+            { name: 'format-detection', content: 'telephone=no' },
         ],
-        link: [{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}],
+        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
-    css: [],
-    styleResources: {
-        scss: ['~assets/style/tokens.scss']
-    },
+    css: [
+        '~/assets/styles/index.scss'
+    ],
+    // styleResources: {
+    //     scss: ['~/assets/style/tokens.scss']
+    // },
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
@@ -40,7 +42,11 @@ export default {
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
-    modules: [],
+    ackee: {
+        server: 'https://ackee.nuxtjs.com',
+        domainId: '6336379b-8d3e-4069-9d2e-897be6a7ed4e'
+    },
+    modules: ['nuxt-ackee'],
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {},
